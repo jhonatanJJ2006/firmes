@@ -1,0 +1,42 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    width: 100%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: v.$fuente_principal;
+    font-size: 1.8rem;
+    width: 100%;
+    overflow-x: hidden;
+
+    // Estilos para la barra de desplazamiento
+    &::-webkit-scrollbar {
+        width: calc(0.3rem);
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: v.$negro;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: v.$blanco; 
+        border-radius: 1rem; 
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: v.$blanco; 
+    }
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+    height: auto;
+}

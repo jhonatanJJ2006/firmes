@@ -1,0 +1,121 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.movies {
+    padding: 3rem 0rem 0rem 0rem;
+}
+
+.movies h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.swiper {
+    width: 100%;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 25rem;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.swiper-container {
+    position: relative;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: white;
+    padding: 1rem;
+    position: absolute;
+    z-index: 10; 
+}
+
+.slider {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: -7rem;
+    position: relative;
+    &__opciones {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        width: 92%; 
+        z-index: 10;
+        padding: 1rem;
+
+        &--clasificacion {
+            color: v.$blanco; 
+            font-size: 3rem;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5); 
+            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        &--guardar {
+            font-size: 3rem;
+            color: v.$blanco; 
+            background-color: rgba(0, 0, 0, 0.5); 
+            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                color: v.$rojo;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background-color: v.$dorado;
+        border-radius: 50%;
+        text-decoration: none;
+        color: v.$blanco;
+        font-size: 24px;
+        margin: 0 auto;
+        border: 1rem solid v.$gris-oscuro;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            color: lighten(v.$gris-oscuro, 10%);
+        }
+    }  
+    
+    &__descripcion {
+
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        color: v.$blanco;
+
+    }
+}
